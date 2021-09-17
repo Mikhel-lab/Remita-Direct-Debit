@@ -1,0 +1,12 @@
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\bin\Debug\net5.0\RDDIntegration.deps.json
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\bin\Debug\net5.0\RDDIntegration.dll
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\bin\Debug\net5.0\ref\RDDIntegration.dll
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\bin\Debug\net5.0\RDDIntegration.pdb
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\obj\Debug\net5.0\RDDIntegration.csprojAssemblyReference.cache
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\obj\Debug\net5.0\RDDIntegration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\obj\Debug\net5.0\RDDIntegration.AssemblyInfoInputs.cache
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\obj\Debug\net5.0\RDDIntegration.AssemblyInfo.cs
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\obj\Debug\net5.0\RDDIntegration.csproj.CoreCompileInputs.cache
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\obj\Debug\net5.0\RDDIntegration.dll
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\obj\Debug\net5.0\ref\RDDIntegration.dll
+C:\Users\SDSD DEV7\source\repos\RDDIntegration\obj\Debug\net5.0\RDDIntegration.pdb

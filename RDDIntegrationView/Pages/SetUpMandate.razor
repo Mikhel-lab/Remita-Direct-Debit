@@ -1,0 +1,123 @@
+﻿@page "/setup"
+
+@using RDDIntegration.Service.Interface
+@using RDDIntegration.Service.RDDIServices
+@using RDDIntegration.Models.Request.SetUpMandate
+@inject IRDDIService rddiService
+@inject RDDIService rdd
+@inject MandateSetUpRequest req
+@inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
+
+<section class="my-login-page h-100 mt-100">
+	<div class="container h-100">
+		<div class="row justify-content-md-center h-100">
+			<div class="card-wrapper">
+				<div class="card fat">
+					<div class="card-body">
+						<h4 class="card-title">Try free for 14 days</h4>
+						<EditForm Model="@req" OnValidSubmit="@SetupMandate">
+							<DataAnnotationsValidator />
+
+							<div class="form-group">
+								<label for="password">Payer Name</label>
+								<InputText id="PayerName" class="form-control" name="password" required data-eye @bind-Value="req.payerName" />
+								<div class="invalid-feedback">
+									PayerName is required
+								</div>
+								<ValidationMessage For="@(() => req.payerName)" />
+							</div>
+
+							<div class="form-group">
+								<label for="password">Payer Email</label>
+								<InputText id="PayerEmail" class="form-control" name="PayerEmail" required data-eye @bind-Value="req.payerEmail" />
+								<ValidationMessage For="@(() => req.payerEmail)" />
+							</div>
+
+							<div class="form-group">
+								<label for="email">Payer PhoneNumber</label>
+								<InputText id="hash" class="form-control" name="Hash" required @bind-Value="req.payerPhone" />
+								<div class="invalid-feedback">
+									Your is PayerPhoneNumber
+								</div>
+								<ValidationMessage For="@(() => req.payerPhone)" />
+							</div>
+
+							<div class="form-group">
+								<label for="email">Pay BankCode</label>
+								<InputText id="hash" class="form-control" name="Hash" required @bind-Value="req.payerBankCode" />
+								<div class="invalid-feedback">
+									Your is PayeBankCode
+								</div>
+								<ValidationMessage For="@(() => req.payerBankCode)" />
+							</div>
+
+							<div class="form-group">
+								<label for="email">Pay Bank Account</label>
+								<InputText id="hash" class="form-control" name="Hash" required @bind-Value="req.payerAccount" />
+								<div class="invalid-feedback">
+									Your is PayeBankAccount
+								</div>
+								<ValidationMessage For="@(() => req.payerAccount)" />
+							</div>
+
+
+
+							<div class="form-group">
+								<label for="email">Amount</label>
+								<InputText id="hash" class="form-control" name="Hash" required @bind-Value="req.amount" />
+								<div class="invalid-feedback">
+									Your is Hash
+								</div>
+								<ValidationMessage For="@(() => req.amount)" />
+							</div>
+
+							<div class="form-group">
+								<label for="email">Start Date</label>
+								<InputText id="hash" class="form-control" name="Hash" required @bind-Value="req.startDate" />
+								<div class="invalid-feedback">
+									Your is StartDate
+								</div>
+								<ValidationMessage For="@(() => req.startDate)" />
+							</div>
+
+							<div class="form-group">
+								<label for="email">End Date</label>
+								<InputText id="hash" class="form-control" name="Hash" required @bind-Value="req.endDate" />
+								<div class="invalid-feedback">
+									Your is EndDate
+								</div>
+								<ValidationMessage For="@(() => req.endDate)" />
+							</div>
+
+							<div class="form-group">
+								<label for="MaxNoDebit">Max No of Debit</label>
+								<InputText id="MaxNoDebit" class="form-control" name="MaxNoDebit" required @bind-Value="req.maxNoOfDebits" />
+								<div class="invalid-feedback">
+									Your is MaxNoDebit
+								</div>
+								<ValidationMessage For="@(() => req.maxNoOfDebits)" />
+							</div>
+
+							<div class="form-group m-0">
+								<button type="submit" class="btn btn-primary btn-block">
+									Submit
+								</button>
+							</div>
+						</EditForm>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+@code {
+	private async Task SetupMandate()
+	{
+		var result = await rdd.SetUpManDatee(req);
+		if (result.statuscode.Equals(true))
+			navigationManager.NavigateTo("/");
+		await JSRuntime.InvokeVoidAsync("alert", "");
+	}
+
+}
